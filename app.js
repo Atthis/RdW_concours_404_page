@@ -56,8 +56,8 @@ function onDocumentMouseMove(e) {
 }
 
 function onDocumentTouchMove(e) {
-  console.log(e.touches.clientX);
-  mouseX = (e.touches.clientX - window.innerWidth / 2) / 100;
+  console.log(e.touches[0].clientX);
+  mouseX = (e.touches[0].clientX - window.innerWidth / 2) / 100;
   //   mouseY = (e.clientY - window.innerHeight / 2) / 100;
 }
 
