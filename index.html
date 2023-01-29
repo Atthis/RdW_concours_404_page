@@ -8,7 +8,7 @@
     <title>404 - page not found | Roadtrip Maps</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
@@ -28,22 +28,30 @@
 
     <!-- main content -->
     <header>
-        <div class="container">
-            <img src="./assets/icon.svg" alt="logo roadtrip" aria-label="Retour à l'accueil" class="logo">
-            <h1 class="title">Roadtrip Maps</h1>
-            <nav>
-                <li class="active"><a href="#">Accueil</a></li>
-                <li><a href="#">Nos itinéraires</a></li>
-                <li><a href="#">À propos</a></li>
-            </nav>
-        </div>
+        <!-- <div class="container"> -->
+        <!-- <img src="./assets/icon.svg" alt="logo roadtrip" aria-label="Retour à l'accueil" class="logo"> -->
+        <h1 class="title">Roadtrip Maps</h1>
+        <nav>
+            <li class="active"><a href="#">Accueil</a></li>
+            <li><a href="#">Nos itinéraires</a></li>
+            <li><a href="#">À propos</a></li>
+        </nav>
+        <!-- </div> -->
     </header>
-    <main class="container">
-        <p>Désolé, cette route semble mener nul part !</p>
-        <p>Vous pouvez <a href="#">retourner à l'accueil</a> ou chercher votre chemin avec le formulaire ci-dessous !</p>
-        <form action=""><label for="search-bar">Ma destination</label><input type="text" name="search-bar" id="search-bar"><button type="submit">Retrouver ma route -></button>
-        </form>
+
+    <main id="main-content">
+        <div class="container">
+            <p class="error-text">erreur<br><span class="err404">404</span></p>
+            <p>Désolé, cette route semble mener nul part...</p>
+            <p>Vous pouvez <a href="#">retourner à l'accueil</a> ou chercher votre chemin avec le formulaire ci-dessous !</p>
+            <form action="">
+                <label for="search-bar">Ma destination</label>
+                <input type="text" name="search-bar" id="search-bar">
+                <button type="submit">Retrouver ma route <img src="./assets/bus_120710.svg" alt=""></button>
+            </form>
+        </div>
     </main>
+
     <footer>
         <div class="container">
             <nav>
@@ -51,13 +59,10 @@
                 <li><a href="#">Nos itinéraires</a></li>
                 <li><a href="#">À propos</a></li>
             </nav>
-            <p>© 2023 Roadtrip Maps - concours du <a href="https://discord.gg/HUTB4h5D">Repaire du Web</a></p>
-            <p>Cédric Blanchard</p>
+            <p class="copyrights">© 2023 Roadtrip Maps - concours du <a href="https://discord.gg/HUTB4h5D" target="_blank">Repaire du Web</a></p>
+            <p><a href="https://cedric-blanchard.com" target="_blank">Cédric Blanchard</a></p>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
