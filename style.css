@@ -4,3 +4,27 @@
     box-sizing:border-box;
 }
 
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.bg-container {
+    position: absolute;
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(46, 46, 46, 0.5);
+}
+
+.logo {
+    width: 120px;
+}
+
+h1.title {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: lighter;
+    color: #fff;
+}

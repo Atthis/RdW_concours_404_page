@@ -1,10 +1,12 @@
 import * as THREE from 'three';
 
+const threeContainer = document.querySelector('#three-container');
+
 let mouseX = 0;
 // let mouseY = 0;
 
 // bg rsc
-const path = './bg-textures/';
+const path = './assets/bg-textures/';
 const format = '.webp';
 const urls = [
   path + 'nx' + format,
@@ -32,11 +34,11 @@ camera.position.z = 5;
 // renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+threeContainer.appendChild(renderer.domElement);
 
 function render() {
-  camera.position.x += (-mouseX - camera.position.x) * 0.1;
-  //   camera.position.y += (-mouseY - camera.position.y) * 0.1;
+  camera.position.x += (-mouseX - camera.position.x) * 0.01;
+  // camera.position.y += (-mouseY - camera.position.y) * 0.1;
 
   camera.lookAt(scene.position);
 
@@ -52,11 +54,10 @@ function animate() {
 
 function onDocumentMouseMove(e) {
   mouseX = (e.clientX - window.innerWidth / 2) / 100;
-  //   mouseY = (e.clientY - window.innerHeight / 2) / 100;
+  // mouseY = (e.clientY - window.innerHeight / 2) / 100;
 }
 
 function onDocumentTouchMove(e) {
-  console.log(e.touches[0].clientX);
   mouseX = (e.touches[0].clientX - window.innerWidth / 2) / 100;
   //   mouseY = (e.clientY - window.innerHeight / 2) / 100;
 }
