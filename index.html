@@ -6,19 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - page not found | Roadtrip Maps</title>
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Roadtrip Maps - page 404">
+    <meta name="description"
+        content="Découvrez des cartes de roadtrip du monde entier ! Parcourez le monde à votre rythme, quelque soit votre pays favoris ! - site concours page 404">
+    <meta name="keywords" content="roadtrip, voyage, découvrir le monde, erreur 404, three.js, designer du web, repaire du web">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="French">
+    <meta name="author" content="Cedric Blanchard">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://atthis.github.io/RdW_concours_404_page/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roadtrip Maps | 404 - page not found">
+    <meta property="og:description" content="Découvrez des cartes de roadtrip du monde entier ! Parcourez le monde à votre rythme, quelque soit votre pays favoris ! - site concours page 404">
+    <meta property="og:image" content="./assets/og-preview.webp">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="atthis.github.io">
+    <meta property="twitter:url" content="https://atthis.github.io/RdW_concours_404_page/">
+    <meta name="twitter:title" content="Roadtrip Maps | 404 - page not found">
+    <meta name="twitter:description" content="Découvrez des cartes de roadtrip du monde entier ! Parcourez le monde à votre rythme, quelque soit votre pays favoris ! - site concours page 404">
+    <meta name="twitter:image" content="./assets/og-preview.webp">
+
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@300;400&subset=latin&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
+    <!-- three scripts -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js" defer></script>
     <script type="importmap" defer>
         {
             "imports": {
-            "three": "https://unpkg.com/three/build/three.module.js"
+            "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.module.min.js"
             }
         }
     </script>
+
     <script type="module" src="app.js" defer></script>
 </head>
 
@@ -27,15 +57,12 @@
 
     <!-- main content -->
     <header>
-        <!-- <div class="container"> -->
-        <!-- <img src="./assets/icon.svg" alt="logo roadtrip" aria-label="Retour à l'accueil" class="logo"> -->
         <h1 class="title">Roadtrip Maps</h1>
-        <nav>
+        <nav aria-label="navigation principale">
             <li class="active"><a href="#">Accueil</a></li>
             <li><a href="#">Nos itinéraires</a></li>
             <li><a href="#">À propos</a></li>
         </nav>
-        <!-- </div> -->
     </header>
 
     <main id="main-content">
@@ -61,7 +88,7 @@
                 <li><a href="#">À propos</a></li>
             </nav>
             <p class="copyrights">© 2023 Roadtrip Maps - concours du <a href="https://discord.gg/HUTB4h5D" target="_blank">Repaire du Web</a></p>
-            <p><a href="https://cedric-blanchard.com" target="_blank">Cédric Blanchard</a></p>
+            <p><a href="https://cedric-blanchard.com" target="_blank" aria-label="site de Cédric Blanchard">Cédric Blanchard</a></p>
         </div>
     </footer>
 </body>

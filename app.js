@@ -1,20 +1,12 @@
 import * as THREE from 'three';
 
 const threeContainer = document.querySelector('#three-container');
-
 const mainContent = document.querySelector('#main-content');
-console.dir(mainContent);
 
 let isOnMain = false;
 
-mainContent.addEventListener('mouseenter', () => {
-  isOnMain = true;
-});
-
-mainContent.addEventListener('mouseleave', () => {
-  isOnMain = false;
-});
-
+mainContent.addEventListener('mouseenter', () => (isOnMain = true));
+mainContent.addEventListener('mouseleave', () => (isOnMain = false));
 
 let mouseX = 0;
 // let mouseY = 0;
@@ -50,8 +42,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(mainContent.clientWidth, mainContent.clientHeight);
 threeContainer.appendChild(renderer.domElement);
 
-const vector = new THREE.Vector4( 0, 1, 0, 0 );
-console.log(renderer.getSize(vector));
+const vector = new THREE.Vector4(0, 1, 0, 0);
 
 function render() {
   if (isOnMain) {
@@ -91,5 +82,4 @@ document.addEventListener('mousemove', onDocumentMouseMove);
 document.addEventListener('touchmove', onDocumentTouchMove);
 window.addEventListener('resize', onWindowResize);
 
-// onWindowResize();
 animate();

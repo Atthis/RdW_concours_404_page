@@ -11,10 +11,11 @@
   --main-light: hsl(0, 0%, 97%);
 
   --regular-padding: 15px;
+  --narrow-padding: 5px;
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', serif;
   min-height: 100vh;
   display: grid;
   grid-template:
@@ -36,7 +37,6 @@ a:visited {
 }
 
 .container {
-  /* width: 100%; */
   max-width: 1050px;
   margin: 0 auto;
 }
@@ -60,7 +60,7 @@ header nav {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 header li {
@@ -81,6 +81,21 @@ h1.title {
   font-family: 'Permanent Marker', cursive;
   font-weight: lighter;
   color: #fff;
+}
+
+@media (max-width: 649px) {
+  header{
+    padding: var(--narrow-padding);
+    flex-direction: column;
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+
+  header nav {
+    border-top: 1px solid var(--main-light);
+    padding-top: 0.8em;
+    text-align: center;
+  }
 }
 
 /*** MAIN ***/
@@ -110,7 +125,7 @@ main button {
   margin: 2em auto;
   display: flex;
   align-items: center;
-  padding: 0.2em 0.8em;
+  padding: 0em 0.8em;
   border-radius: 0.6em;
   border: 2px solid var(--main-dark);
   cursor: pointer;
@@ -118,12 +133,12 @@ main button {
 }
 
 main button:hover {
-  box-shadow: 0px 0px 0px 5px var(--main-dark);
+  box-shadow: 0px 0px 0px 4px var(--main-dark);
 }
 
 main button img {
   display: inline;
-  height: 70px;
+  height: 50px;
   margin-left: 0.8em;
   transform-origin: bottom 10%;
 }
