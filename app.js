@@ -3,6 +3,7 @@ import * as THREE from 'three';
 const threeContainer = document.querySelector('#three-container');
 
 const mainContent = document.querySelector('#main-content');
+console.dir(mainContent);
 
 let isOnMain = false;
 
@@ -38,7 +39,7 @@ scene.background = textureCube;
 // camera
 const camera = new THREE.PerspectiveCamera(
   100,
-  window.innerWidth / window.innerHeight,
+  mainContent.clientWidth / mainContent.clientHeight,
   0.01,
   1000
 );
@@ -46,8 +47,11 @@ camera.position.z = 5;
 
 // renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(mainContent.clientWidth, mainContent.clientHeight);
 threeContainer.appendChild(renderer.domElement);
+
+const vector = new THREE.Vector4( 0, 1, 0, 0 );
+console.log(renderer.getSize(vector));
 
 function render() {
   if (isOnMain) {
@@ -78,13 +82,14 @@ function onDocumentTouchMove(e) {
 }
 
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = mainContent.clientWidth / mainContent.clientHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(mainContent.clientWidth, mainContent.clientHeight);
 }
 
 document.addEventListener('mousemove', onDocumentMouseMove);
 document.addEventListener('touchmove', onDocumentTouchMove);
 window.addEventListener('resize', onWindowResize);
 
+// onWindowResize();
 animate();
