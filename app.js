@@ -45,7 +45,10 @@ threeContainer.appendChild(renderer.domElement);
 const vector = new THREE.Vector4(0, 1, 0, 0);
 
 function render() {
-  if (isOnMain) {
+  if (
+    isOnMain ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+  ) {
     camera.position.x += (-mouseX - camera.position.x) * 0.01;
     // camera.position.y += (-mouseY - camera.position.y) * 0.1;
 
