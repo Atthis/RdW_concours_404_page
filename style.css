@@ -64,7 +64,7 @@ header nav {
 }
 
 header li {
-  margin-inline: 1em;
+  margin-inline: 0.8em;
   position: relative;
 }
 
@@ -84,7 +84,7 @@ h1.title {
 }
 
 @media (max-width: 649px) {
-  header{
+  header {
     padding: var(--narrow-padding);
     flex-direction: column;
     gap: 20px;
@@ -92,8 +92,9 @@ h1.title {
   }
 
   header nav {
-    border-top: 1px solid var(--main-light);
+    margin-bottom: 0.8em;
     padding-top: 0.8em;
+    border-top: 1px solid var(--main-light);
     text-align: center;
   }
 }
@@ -104,7 +105,25 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-size: 1.2rem;
   color: var(--main-light);
+}
+
+main .container {
+  max-width: 90%;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+main p {
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 5px var(--main-dark);
+}
+
+main p:last-of-type {
+  margin-bottom: 40px;
 }
 
 .error-text {
@@ -116,13 +135,50 @@ main {
 
 .err404 {
   color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 5px var(--main-dark);
   font-size: 8rem;
 }
 
+.search-input {
+  position: relative;
+}
+
+main label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--main-dark);
+  transform: translate(-100%, -50%);
+  font-style: italic;
+  user-select: none;
+  transform-origin: left center;
+  transition: transform 0.15s ease-in-out;
+}
+
+main label:hover {
+  cursor: text;
+}
+
+main input {
+  display: inline-block;
+  min-width: 300px;
+  border: 1px solid var(--main-dark);
+  border-radius: 0.3em;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1.2em 0.5em 0.3em;
+}
+
+main input:focus + label,
+.isComplete {
+  transform: translate(-110%, -108%) scale(0.8);
+}
+
 main button {
-  display: block;
-  margin: 2em auto;
+  display: flex;
+  justify-content: space-around;
+  min-width: 300px;
+  margin: 1.2em auto;
   display: flex;
   align-items: center;
   padding: 0em 0.8em;
@@ -144,7 +200,7 @@ main button img {
 }
 
 main button:hover img {
-  animation: accelerate 1s infinite;
+  animation: accelerate 0.8s infinite;
 }
 
 @keyframes accelerate {
@@ -164,27 +220,35 @@ footer {
   padding: var(--regular-padding);
   background-color: var(--main-dark);
   color: var(--main-light);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-footer .container {
+footer nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
+footer nav a:hover {
+  text-decoration: underline currentColor wavy;
+}
 footer li {
-  margin-block: 0.8em;
-}
-
-footer li:first-child {
-  margin-top: 0;
-}
-
-footer li:last-child {
-  margin-bottom: 0;
+  margin-inline: 2em;
 }
 
 .copyrights {
   font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.copyrights a {
+  text-decoration: underline;
+}
+
+@media (max-width: 409px) {
+  footer li {
+    margin-inline: 1.3em;
+  }
 }

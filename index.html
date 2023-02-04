@@ -35,7 +35,7 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@300;400&subset=latin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300;0,400;1,300&subset=latin&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -73,8 +73,10 @@
             <p>Désolé, cette route semble mener nul part...</p>
             <p>Vous pouvez <a href="#">retourner à l'accueil</a> ou chercher votre chemin avec le formulaire ci-dessous !</p>
             <form action="">
-                <label for="search-bar">Ma destination</label>
-                <input type="text" name="search-bar" id="search-bar">
+                <div class="search-input">
+                    <input type="text" name="search-bar" id="search-bar">
+                    <label for="search-bar" id="search-bar-label">Ma destination</label>
+                </div>
                 <button type="submit">Retrouver ma route <img src="./assets/bus_120710.svg" alt=""></button>
             </form>
         </div>
@@ -87,8 +89,7 @@
                 <li><a href="#">Nos itinéraires</a></li>
                 <li><a href="#">À propos</a></li>
             </nav>
-            <p class="copyrights">© 2023 Roadtrip Maps - concours du <a href="https://discord.gg/HUTB4h5D" target="_blank">Repaire du Web</a></p>
-            <p><a href="https://cedric-blanchard.com" target="_blank" aria-label="site de Cédric Blanchard">Cédric Blanchard</a></p>
+            <p class="copyrights">© 2023 Roadtrip Maps - concours du <a href="https://discord.gg/HUTB4h5D" target="_blank">Repaire du Web</a> | <a href="https://cedric-blanchard.com" target="_blank" aria-label="site de Cédric Blanchard">Cédric Blanchard</a></p>
         </div>
     </footer>
 </body>

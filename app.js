@@ -86,3 +86,13 @@ document.addEventListener('touchmove', onDocumentTouchMove);
 window.addEventListener('resize', onWindowResize);
 
 animate();
+
+/* Search input interaction */
+const searchBar = document.querySelector('#search-bar');
+const searchBarLabel = document.querySelector('#search-bar-label');
+
+searchBar.addEventListener('blur', function () {
+  this.value
+    ? searchBarLabel.classList.add('isComplete')
+    : searchBarLabel.classList.remove('isComplete');
+});
